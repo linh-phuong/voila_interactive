@@ -1,0 +1,21 @@
+{%- macro voila_setup_labextensions(base_url, labextensions) -%}
+<script src="{{ page_config['fullStaticUrl'] | e }}/voila.js"></script>
+{%- endmacro %}
+
+{# For backward compatibility #}
+{%- macro voila_setup(base_url, nbextensions) -%}
+{{ voila_setup_labextensions(base_url, labextensions) }}
+{%- endmacro %}
+
+{# Helper functions for updating the loading text #}
+{%- macro voila_setup_helper_functions() -%}
+<script>
+var voila_process = function(cell_index, cell_count) {
+  var el = document.getElementById("loading_text");
+  el.innerHTML = `Executing ${cell_index} of ${cell_count}`;
+}
+var voila_heartbeat = function() {
+  console.log('Ok, voila is still executing...');
+}
+</script>
+{%- endmacro %}
