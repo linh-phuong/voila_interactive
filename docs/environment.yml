@@ -1,7 +1,0 @@
-name: voila
-channels:
-  - conda-forge
-  - conda
-dependencies:
-  - sphinx
-  - pydata-sphinx-theme

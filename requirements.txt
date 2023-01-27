@@ -3,3 +3,7 @@ ipympl
 ipyvolume
 scipy
 voila
+numpy
+matplotlib
+pandas
+functools
