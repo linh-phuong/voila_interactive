@@ -6,4 +6,3 @@ voila
 numpy
 matplotlib
 pandas
-functools
